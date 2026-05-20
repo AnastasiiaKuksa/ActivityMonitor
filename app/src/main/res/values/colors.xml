@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <color name="primary">#FF8A80</color> <!-- Ніжний рожевий -->
+        <color name="primary_light">#FFBCAF</color>
+        <color name="primary_dark">#C85A54</color>
+        <color name="light_gray">#D7C9C9</color>
+        <color name="secondary">#80CBC4</color> <!-- М'ятний -->
+        <color name="secondary_light">#B2FEF7</color>
+        <color name="secondary_dark">#4F9A94</color>
+        <color name="bmi_underweight">#EF4444</color>           <!-- Red -->
+        <color name="bmi_underweight_light">#FEE2E2</color>     <!-- Light Red -->
+
+        <color name="bmi_normal">#10B981</color>                <!-- Green -->
+        <color name="bmi_normal_light">#DCFCE7</color>          <!-- Light Green -->
+
+        <color name="bmi_overweight">#F59E0B</color>            <!-- Amber -->
+        <color name="bmi_overweight_light">#FEF3C7</color>      <!-- Light Amber -->
+
+        <color name="bmi_obese">#DC2626</color>                 <!-- Dark Red -->
+        <color name="bmi_obese_light">#FECACA</color>           <!-- Light Red -->
+        <color name="accent">#CE93D8</color> <!-- Лавандовий -->
+        <color name="accent_light">#FFC4FF</color>
+        <color name="accent_dark">#9C64A6</color>
+
+        <!-- Фон та поверхні -->
+        <color name="background">#FAFAFA</color> <!-- Дуже світлий сірий -->
+        <color name="surface">#FFFFFF</color> <!-- Білий -->
+        <color name="surface_variant">#F5F5F5</color> <!-- Світлий сірий -->
+
+        <!-- Текст -->
+        <color name="text_primary">#212121</color> <!-- Темно-сірий -->
+        <color name="text_secondary">#757575</color> <!-- Середній сірий -->
+        <color name="text_disabled">#BDBDBD</color> <!-- Світлий сірий -->
+
+        <!-- Індикатори прогресу -->
+
+        <color name="progress_active">#9C27B0</color> <!-- Фіолетовий -->
+
+    <!-- Кольори для аналітики -->
+    <color name="steps_color">#4CAF50</color>
+    <color name="sleep_color">#9C27B0</color>
+    <color name="calories_color">#FF9800</color>
+    <color name="heart_rate_color">#F44336</color>
+    <color name="success_color">#4CAF50</color>
+    <color name="warning_color">#FF9800</color>
+    <color name="error_color">#F44336</color>
+
+
+
+    <!-- Додаткові кольори -->
+    <color name="divider_color">#E0E0E0</color>
+    <color name="chip_background">#1F000000</color>
+    <!-- Існуючі кольори -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+    <!-- Додайте ці кольори для ProgressBar та PieChart -->
+    <color name="progress_steps">#FF4CAF50</color>
+    <color name="progress_calories">#FFFF9800</color>
+    <color name="progress_active_minutes">#FF2196F3</color>
+
+    <!-- Додаткові кольори, які можуть знадобитися -->
+    <color name="progress_sleep">#FF9C27B0</color>
+    <color name="colorPrimary">#FF6200EE</color>
+    <color name="colorPrimaryDark">#FF3700B3</color>
+    <color name="colorAccent">#FF03DAC5</color>
+
+        <!-- Статуси -->
+        <color name="success">#66BB6A</color> <!-- Зелений успіх -->
+        <color name="warning">#FFA726</color> <!-- Жовтий попередження -->
+        <color name="error">#EF5350</color> <!-- Червоний помилка -->
+        <color name="info">#29B6F6</color> <!-- Блакитний інформація -->
+
+        <!-- Додаткові -->
+        <color name="white">#FFFFFF</color>
+        <color name="black">#000000</color>
+        <color name="transparent">#00000000</color>
+
+    <color name="bottom_nav_colors">@color/selector_bottom_nav_colors</color>
+
+
+</resources>

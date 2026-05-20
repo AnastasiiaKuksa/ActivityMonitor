@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Activity Monitor</string>
+
+    <!-- Login Activity -->
+    <string name="login_title">Вхід в систему</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Пароль</string>
+    <string name="login_button">Увійти</string>
+    <string name="register_link">Немає акаунту? Зареєструватися</string>
+
+    <!-- Register Activity -->
+    <string name="register_title">Реєстрація</string>
+    <string name="confirm_password_hint">Підтвердіть пароль</string>
+    <string name="name_hint">Ім\'я</string>
+    <string name="age_hint">Вік</string>
+    <string name="weight_hint">Вага (кг)</string>
+    <string name="height_hint">Зріст (см)</string>
+    <string name="register_button">Зареєструватися</string>
+    <string name="login_link">Вже є акаунт? Увійти</string>
+
+    <!-- Main Activity -->
+    <string name="home_tab">Головна</string>
+    <string name="analytics_tab">Аналітика</string>
+    <string name="profile_tab">Профіль</string>
+
+    <!-- Messages -->
+    <string name="fill_all_fields">Будь ласка, заповніть всі поля</string>
+    <string name="passwords_not_match">Паролі не співпадають</string>
+    <string name="email_exists">Користувач з таким email вже існує</string>
+    <string name="registration_success">Реєстрація успішна!</string>
+    <string name="login_success">Вітаємо, %s!</string>
+    <string name="invalid_credentials">Невірний email або пароль</string>
+    <string name="profile_updated">Профіль оновлено!</string>
+
+    <string name="icon_sleep_description">Іконка сну</string>
+</resources>

@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="80dp">
+
+        <!-- Картка профілю -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="6dp"
+            app:cardBackgroundColor="@android:color/white"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <!-- Заголовок секції -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Особистий профіль"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:letterSpacing="0.02"
+                    android:layout_marginBottom="20dp" />
+
+                <!-- Аватар та основна інформація -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="24dp">
+
+                    <!-- Аватар -->
+                    <!-- Аватар -->
+                    <RelativeLayout
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginEnd="20dp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/ivProfilePhoto"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_person"
+                            app:civ_border_width="3dp"
+                            app:civ_border_color="#E0E0E0"
+                            android:contentDescription="Аватар профілю" />
+
+                        <!-- Кнопка зміни фото - в правому нижньому куті -->
+                        <ImageButton
+                            android:id="@+id/btnChangePhoto"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="68dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/circle_primary"
+                            android:contentDescription="Змінити фото"
+                            android:elevation="8dp"
+                            android:padding="8dp"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/ic_camera"
+                            android:tint="@android:color/white" />
+
+                    </RelativeLayout>
+                    <!-- Ім'я та email -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvUserName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Завантаження..."
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/black"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:letterSpacing="0.01" />
+
+                        <TextView
+                            android:id="@+id/tvUserEmail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Завантаження..."
+                            android:textSize="14sp"
+                            android:textColor="#666666"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:layout_marginTop="4dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Інформація профілю -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Вік та стать -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="20dp">
+
+                        <!-- Вік -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="ВІК"
+                                android:textSize="12sp"
+                                android:textColor="#666666"
+                                android:letterSpacing="0.05"
+                                android:textAllCaps="true" />
+
+                            <TextView
+                                android:id="@+id/tvUserAge"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Завантаження..."
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:textColor="@android:color/black"
+                                android:layout_marginTop="8dp" />
+
+                            <EditText
+                                android:id="@+id/etAge"
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:visibility="gone"
+                                android:hint="Вік"
+                                android:layout_marginTop="8dp"
+                                android:gravity="center" />
+
+                        </LinearLayout>
+
+                        <!-- Стать -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="СТАТЬ"
+                                android:textSize="12sp"
+                                android:textColor="#666666"
+                                android:letterSpacing="0.05"
+                                android:textAllCaps="true" />
+
+                            <TextView
+                                android:id="@+id/tvUserGender"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Завантаження..."
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:textColor="@android:color/black"
+                                android:layout_marginTop="8dp" />
+
+                            <EditText
+                                android:id="@+id/etGender"
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"
+                                android:hint="Стать"
+                                android:layout_marginTop="8dp"
+                                android:gravity="center" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!-- Зріст та вага -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="20dp">
+
+                        <!-- Зріст -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="ЗРІСТ"
+                                android:textSize="12sp"
+                                android:textColor="#666666"
+                                android:letterSpacing="0.05"
+                                android:textAllCaps="true" />
+
+                            <TextView
+                                android:id="@+id/tvUserHeight"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Завантаження..."
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:textColor="@android:color/black"
+                                android:layout_marginTop="8dp" />
+
+                            <EditText
+                                android:id="@+id/etHeight"
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:inputType="numberDecimal"
+                                android:visibility="gone"
+                                android:hint="Зріст (см)"
+                                android:layout_marginTop="8dp"
+                                android:gravity="center" />
+
+                        </LinearLayout>
+
+                        <!-- Вага -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="ВАГА"
+                                android:textSize="12sp"
+                                android:textColor="#666666"
+                                android:letterSpacing="0.05"
+                                android:textAllCaps="true" />
+
+                            <TextView
+                                android:id="@+id/tvUserWeight"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Завантаження..."
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:textColor="@android:color/black"
+                                android:layout_marginTop="8dp" />
+
+                            <EditText
+                                android:id="@+id/etWeight"
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:inputType="numberDecimal"
+                                android:visibility="gone"
+                                android:hint="Вага (кг)"
+                                android:layout_marginTop="8dp"
+                                android:gravity="center" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!-- Поле для редагування імені -->
+                    <LinearLayout
+                        android:id="@+id/nameEditSection"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ІМ'Я"
+                            android:textSize="12sp"
+                            android:textColor="#666666"
+                            android:letterSpacing="0.05"
+                            android:textAllCaps="true" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            app:boxCornerRadiusTopStart="8dp"
+                            app:boxCornerRadiusTopEnd="8dp"
+                            app:boxCornerRadiusBottomStart="8dp"
+                            app:boxCornerRadiusBottomEnd="8dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Введіть ваше ім'я"
+                                android:gravity="center" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Картка BMI -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardBMI"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:cardBackgroundColor="#F5F5F5"
+                    android:layout_marginTop="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ІНДЕКС МАСИ ТІЛА"
+                            android:textSize="12sp"
+                            android:textColor="#666666"
+                            android:letterSpacing="0.05"
+                            android:textAllCaps="true" />
+
+                        <TextView
+                            android:id="@+id/tvBMI"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="--"
+                            android:textSize="32sp"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/black"
+                            android:layout_marginTop="12dp" />
+
+                        <TextView
+                            android:id="@+id/tvBMICategory"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Розрахунок..."
+                            android:textSize="16sp"
+                            android:textColor="@android:color/black"
+                            android:layout_marginTop="8dp" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Кнопки дій - вирівняні рівно -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnUpdate"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="Редагувати"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:backgroundTint="@color/colorPrimary"
+                app:cornerRadius="12dp"
+                android:layout_marginEnd="6dp"
+                android:letterSpacing="0.01" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLogout"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="Вийти"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:strokeColor="#E0E0E0"
+                app:strokeWidth="1dp"
+                android:textColor="@android:color/black"
+                app:cornerRadius="12dp"
+                android:layout_marginStart="6dp"
+                android:letterSpacing="0.01" />
+
+        </LinearLayout>
+
+        <!-- Блок цілей -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardGoals"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="6dp"
+            app:cardBackgroundColor="@android:color/white"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Мої цілі"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:letterSpacing="0.02" />
+
+                <!-- Контент цілей (динамічно заповнюється) -->
+                <LinearLayout
+                    android:id="@+id/goalsSection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tvGoalTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Назва цілі"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"
+                        android:layout_marginBottom="12dp" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp"
+                        android:layout_marginBottom="12dp"
+                        android:progressTint="@color/colorPrimary" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="12dp">
+
+                        <TextView
+                            android:id="@+id/tvProgressPercent"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0%"
+                            android:textSize="12sp"
+                            android:textColor="#666666" />
+
+                        <TextView
+                            android:id="@+id/tvCurrentStep"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Початок"
+                            android:textSize="12sp"
+                            android:textColor="@color/colorPrimary"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <!-- Шкала прогресу -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="16dp">
+
+                        <TextView
+                            android:id="@+id/tvStartWeight"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0 кг"
+                            android:textSize="12sp"
+                            android:gravity="start"
+                            android:textColor="#666666" />
+
+                        <TextView
+                            android:id="@+id/tvCurrentWeight"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0 кг"
+                            android:textSize="14sp"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvTargetWeight"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0 кг"
+                            android:textSize="12sp"
+                            android:gravity="end"
+                            android:textColor="#666666" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvGoalDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Опис цілі"
+                        android:textSize="14sp"
+                        android:textColor="#666666"
+                        android:layout_marginTop="8dp" />
+
+                    <!-- Кнопка оновлення прогресу -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnUpdateProgress"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:text="Оновити прогрес"
+                        android:textSize="14sp"
+                        app:strokeColor="@color/colorPrimary"
+                        app:strokeWidth="1dp"
+                        android:textColor="@color/colorPrimary"
+                        app:cornerRadius="12dp"
+                        android:layout_marginTop="20dp" />
+
+                </LinearLayout>
+
+                <!-- Кнопка встановлення цілі (коли немає цілі) -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSetGoal"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:text="Встановити нову ціль"
+                    android:textSize="14sp"
+                    app:backgroundTint="@color/colorPrimary"
+                    app:cornerRadius="12dp" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp"
+    android:layout_marginBottom="8dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="20dp">
+
+        <!-- Іконка сну -->
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_sleep"
+            app:tint="@color/progress_sleep"
+            android:background="@drawable/circle_background_sleep"
+            android:padding="12dp"
+            android:contentDescription="@string/icon_sleep_description" />
+
+        <!-- Основна інформація -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="16dp">
+
+            <!-- Дата -->
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="01 січня"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                tools:text="15 грудня" />
+
+            <!-- Тривалість -->
+            <TextView
+                android:id="@+id/tvDuration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="7.5 годин"
+                android:textSize="14sp"
+                android:textColor="@color/text_secondary"
+                android:layout_marginTop="2dp"
+                tools:text="8.2 години" />
+
+            <!-- Кількість сесій -->
+            <TextView
+                android:id="@+id/tvSessionCount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2 сесії"
+                android:textSize="12sp"
+                android:textColor="@color/text_disabled"
+                android:layout_marginTop="4dp"
+                tools:text="3 сесії" />
+
+        </LinearLayout>
+
+        <!-- Додаткова інформація -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="end">
+
+            <!-- Якість сну -->
+            <TextView
+                android:id="@+id/tvQuality"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Добре"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:background="@drawable/pill_background_good"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="6dp"
+                tools:text="Відмінно" />
+
+            <!-- Ефективність -->
+            <TextView
+                android:id="@+id/tvEfficiency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="85%"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/success"
+                android:layout_marginTop="8dp"
+                tools:text="92%" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

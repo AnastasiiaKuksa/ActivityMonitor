@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="workout_types">
+        <item>Біг</item>
+        <item>Ходьба</item>
+        <item>Їзда на велосипеді</item>
+        <item>Плавання</item>
+        <item>Силове тренування</item>
+        <item>Йога</item>
+        <item>Пілатес</item>
+        <item>Аеробіка</item>
+        <item>Танці</item>
+        <item>Бокс</item>
+        <item>Кросфіт</item>
+        <item>Інше</item>
+    </string-array>
+</resources>
